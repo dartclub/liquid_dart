@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   string_scanner: ^1.0.5
+  intl: ^0.16.1
 
 dev_dependencies:
   pedantic: ^1.8.0

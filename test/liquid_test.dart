@@ -219,8 +219,8 @@ void main() {
         'only': '{% include "name_snippet.html" with greeting="Hi" only %}',
       });
 
-      context.variables['person'] = "John";
-      context.variables['greeting'] = "Hello";
+      context.variables['person'] = 'John';
+      context.variables['greeting'] = 'Hello';
 
       var template = Template.parse(context, root.resolve('simple'));
       expect(template.render(context), equals('Hello, John!'));
@@ -250,7 +250,7 @@ void main() {
   });
 }
 
-reverse(String string) {
+String reverse(String string) {
   final sb = StringBuffer();
   for (int i = string.length - 1; i >= 0; i--) {
     sb.writeCharCode(string.codeUnitAt(i));
