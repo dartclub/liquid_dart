@@ -35,6 +35,11 @@ class BuiltinsModule implements Module {
     context.tags['load'] = BlockParser.simple(Load.factory, hasEndTag: false);
     context.tags['block'] = BlockParser.simple(NamedBlock.factory);
     context.tags['extends'] = Extends.factory;
+// TODO context.tags['raw']
+// TODO context.tags['increment']
+// TODO context.tags['decrement']
+// TODO context.tags['case']
+// TODO context.tags['when']
 
     context.filters['default'] = (input, args) {
       var output = input != null ? input.toString() : '';
@@ -255,10 +260,5 @@ class BuiltinsModule implements Module {
 // TODO context.filters['escape_once']
     context.filters['to_base64'] = context.filters['image_to_base64'] =
         (input, args) => base64Encode(input as List<int>);
-// TODO context.tags['raw']
-// TODO context.tags['increment']
-// TODO context.tags['decrement']
-// TODO context.tags['case']
-// TODO context.tags['when']
   }
 }
